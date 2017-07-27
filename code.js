@@ -1,9 +1,10 @@
-const addStudent = (e) => {
-  console.log(e);
+const addStudent = () => {
+  if (document.getElementById("input").value != '') {
   document.getElementById('list').innerHTML += `<li>${document.getElementById("input").value}<span class="remove">x</span></li>`
   actualize();
   document.getElementById("input").value = "";
   document.getElementById("input").focus();
+  }
 }
 const removeStudent = (e) => {
   child = e.target.parentElement
